@@ -11,7 +11,6 @@ public class NumberOfIslands {
             this.second = second;
         }
     }
-
     public int numIslands(char[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
