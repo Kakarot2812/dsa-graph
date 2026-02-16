@@ -12,29 +12,28 @@ Explanation:
 */
 
 
-    public class NumberOfProvinces {
-        public int findCircleNum(int[][] isConnected) {
-            int m = isConnected.length;
-            boolean[] vis = new boolean[m];
-            int count = 0;
-            for(int i =0;i< m;i++){
-                if(vis[i] == false){
-                    count++;
-                    dfs(i,vis,isConnected);
-                }
+public class NumberOfProvinces {
+    public int findCircleNum(int[][] isConnected) {
+        int m = isConnected.length;
+        boolean[] vis = new boolean[m];
+        int count = 0;
+        for(int i =0;i< m;i++){
+            if(vis[i] == false){
+                count++;
+                dfs(i,vis,isConnected);
             }
-            return count;
         }
-        void dfs(int city,boolean[] vis,int[][] arr){
-            vis[city] = true;
+        return count;
+    }
+    void dfs(int city,boolean[] vis,int[][] arr){
+        vis[city] = true;
 
 
-            for(int i =0;i < arr.length;i++){
+        for(int i =0;i < arr.length;i++){
 
-                if(vis[i] == false && arr[city][i] == 1){
-                    dfs(i,vis,arr);
-                }
+            if(vis[i] == false && arr[city][i] == 1){
+                dfs(i,vis,arr);
             }
         }
     }
-
+}
