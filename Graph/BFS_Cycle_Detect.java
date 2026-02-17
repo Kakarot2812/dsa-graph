@@ -37,7 +37,7 @@ public class BFS_Cycle_Detect {
         }
         return false;
     }
-    public static boolean checkForCycle(int src,boolean[] vis,ArrayList<ArrayList<Integer>> adj){
+    private static boolean checkForCycle(int src,boolean[] vis,ArrayList<ArrayList<Integer>> adj){
 
         Queue<Pair> queue = new LinkedList<>();
         vis[src] = true;
