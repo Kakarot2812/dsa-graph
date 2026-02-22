@@ -24,7 +24,7 @@ public class DFS {
      * @param ans     DFS traversal result list
      */
 
-    public static void dfs(int node,boolean[] visited,ArrayList<ArrayList<Integer>> adj,ArrayList<Integer> ans){
+    private static void dfs(int node,boolean[] visited,ArrayList<ArrayList<Integer>> adj,ArrayList<Integer> ans){
         visited[node] = true;
         ans.add(node);
 
